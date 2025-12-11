@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{59266327-5f37-4e66-b6a1-87932eb6d5ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="useful headers">
+      <UniqueIdentifier>{0941c990-bf3c-4910-9e40-98a696b79c98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="useful headers\headers">
+      <UniqueIdentifier>{fac40e59-999f-4b0f-93e7-7de9c9196dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="useful headers\source">
+      <UniqueIdentifier>{745af6ab-5111-455e-97e5-ddb56795e1ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\section 14">
+      <UniqueIdentifier>{e96ec368-03ca-47a1-b40a-c6dcdcf40ba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\section 13">
+      <UniqueIdentifier>{074f192c-bb66-4ecb-adfa-9fc816940490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\section 12">
+      <UniqueIdentifier>{7264529b-41e5-487c-9991-f2224d8aa681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\section 11">
+      <UniqueIdentifier>{4cbc97c0-1738-4631-96b4-cae6b698deca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\section 10">
+      <UniqueIdentifier>{8e640a31-eaf0-4462-a0cf-867a4a07a24f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\section 15">
+      <UniqueIdentifier>{30944cf3-94ce-493e-ab65-95dce51118f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="error.h">
+      <Filter>useful headers\headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\section 10\10.01.cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.03.cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.04(1).cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.04(2).cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.04(3).cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.04(4).cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.04(5).cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.04(6).cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.05.cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.06.cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\10.08.cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 10\Testing.cpp">
+      <Filter>source\section 10</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.02.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.03.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.04.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.05.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.06.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.10.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.11.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 11\11.12.cpp">
+      <Filter>source\section 11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.01(1).cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.01(2).cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.01(3).cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.02.cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.03.cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.04.cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.06(1).cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.06(2).cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.07.cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 12\12.08.cpp">
+      <Filter>source\section 12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.02.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.03.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.04.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.05.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.07.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.09.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.10.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.11.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 13\13.12.cpp">
+      <Filter>source\section 13</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.01.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.02.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.03.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.04.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.06.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.07.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.07.1.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.08.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.08.1.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.09.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.09.1.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\section 14\14.10.cpp">
+      <Filter>source\section 14</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>source\section 15</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\source\section 14\14.04(test).txt">
+      <Filter>source\section 14</Filter>
+    </Text>
+    <Text Include="..\source\section 14\14.04(result).txt">
+      <Filter>source\section 14</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
