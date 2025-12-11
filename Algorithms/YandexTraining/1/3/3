@@ -1,0 +1,22 @@
+n, m = map(int, input().split())
+a, b = set(), set()
+
+for i in range(n):
+    a.add(int(input()))
+for j in range(m):
+    b.add(int(input()))
+    
+ab = a & b
+
+print(len(ab))
+print(*sorted(ab))
+
+a_ab = a - ab
+
+print(len(a_ab))
+print(*sorted(a_ab))
+
+b_ab = b - ab
+
+print(len(b_ab))
+print(*sorted(b_ab))

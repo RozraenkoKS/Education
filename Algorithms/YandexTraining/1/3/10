@@ -1,0 +1,34 @@
+t, d, n = map(int, input().split())
+
+for i in range(1, n):
+    x, y = map(int, input().split())
+    if i == n - 1:
+
+        possible_spots = set()
+        possible_spots.add((x, y))
+        for j in range(1, t + 1):
+            possible_spots.add((x + j, y))
+            possible_spots.add((x, y + j)) 
+            possible_spots.add((x - j, y))
+            possible_spots.add((x, y - j))
+            if 2 * j <= t:
+                possible_spots.add((x + j, y + j)) 
+                possible_spots.add((x + j, y - j)) 
+                possible_spots.add((x - j, y + j)) 
+                possible_spots.add((x - j, y - j))
+                        
+        x, y = map(int, input().split())
+        current_spots = set()
+        current_spots.add((x, y))
+        for j in range(1, t + 1):
+            current_spots.add((x + j, y))
+            current_spots.add((x, y + j)) 
+            current_spots.add((x - j, y))
+            current_spots.add((x, y - j))
+            if 2 * j <= t:
+                current_spots.add((x + j, y + j)) 
+                current_spots.add((x + j, y - j)) 
+                current_spots.add((x - j, y + j)) 
+                current_spots.add((x - j, y - j))
+                            
+print(possible_spots & current_spots)

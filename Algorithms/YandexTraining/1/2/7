@@ -1,0 +1,31 @@
+def maxes(a):
+    if a[1] > a[0]:
+        max1 = a[0]
+        max2 = a[1]
+    else:
+        max1 = a[1]
+        max2 = a[0] 
+        
+    for i in range(2, len(a)):
+        if a[i] > max1 and a[i] <= max2:
+            max1 = a[i]
+        elif a[i] > max2:
+            max1 = max2
+            max2 = a[i]
+    
+    return (max1, max2)
+    
+
+def main(a):
+    max1, max2 = maxes(a)
+    min1, min2 = maxes([-i for i in a])
+    min1 = -min1
+    min2 = -min2
+    
+    if max1 * max2 >= min1 * min2:
+        return f'{max1} {max2}'
+    elif min1 * min2 > max1 * max2:
+        return f'{min2} {min1}'
+    
+if __name__ == '__main__':
+    print(main(list(map(int, input().split()))))

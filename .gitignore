@@ -1,0 +1,125 @@
+# -----------------------
+# Images / PDFs / media
+# -----------------------
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
+*.png
+*.PNG
+*.gif
+*.svg
+*.pdf
+*.PDF
+
+# -----------------------
+# Jupyter / notebooks
+# -----------------------
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+*.nb.html
+
+# -----------------------
+# Python cache / bytecode
+# -----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# -----------------------
+# C++ / compiled binaries
+# -----------------------
+*cpp          # бинарники без точки
+*.o           # объектные файлы
+*.obj         # объектные файлы Windows
+*.exe         # исполняемые файлы Windows
+*.out         # исполняемые файлы Linux/macOS
+*.a           # статические библиотеки
+*.so          # динамические библиотеки Linux
+*.dll         # динамические библиотеки Windows
+/build/       # папка сборки
+
+# -----------------------
+# Игнорирование YandexTraining/1/
+# -----------------------
+YandexTraining/1/**    # все файлы и папки внутри
+
+# -----------------------
+# Но отслеживаем исходники
+# -----------------------
+!YandexTraining/1/
+!YandexTraining/1/**/*.cpp
+!YandexTraining/1/**/*.py
+
+# -----------------------
+# Virtual environments
+# -----------------------
+venv/
+env/
+.venv/
+.env/
+envs/
+*.conda
+*.condarc
+
+# -----------------------
+# Logs / temporary files
+# -----------------------
+*.log
+*.out
+*.tmp
+*.bak
+*.swp
+*.eng
+
+# -----------------------
+# OS generated files
+# -----------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------
+# IDEs / editors
+# -----------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.Rproj.user/
+
+# -----------------------
+# Testing / type-checking
+# -----------------------
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+*.cover
+*.hypothesis/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# -----------------------
+# Data / model files (optional, for data science)
+# -----------------------
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.joblib
+*.pkl
+*.pickle
+
+# -----------------------
+# Other
+# -----------------------
+Education/
+Books/

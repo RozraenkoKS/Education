@@ -1,0 +1,25 @@
+def get_p_n(k, m, apparts_floor):
+    p = (k - 1) // (apparts_floor * m) + 1
+    n = (k - (p - 1) * apparts_floor * m - 1) // apparts_floor + 1
+    return p, n
+
+
+def decision_1(k1, m, k2, p2, n2):
+    results_p = set()
+    results_n = set()
+    apparts_floor = 1
+    while apparts_floor * (m * (p2 - 1) + (n2 - 1)) < k2 and apparts_floor < 100000:
+        p, n = get_p_n(k2, m, apparts_floor)
+        if p2 == p and n2 == n:
+            p1, n1 = get_p_n(k1, m, apparts_floor)
+            results_p.add(p1)
+            results_n.add(n1)
+        apparts_floor += 1
+
+    if len(results_p) == 0:
+        return '-1 -1'
+    else:
+        return str(0 if len(results_p) > 1 else results_p.pop()) + ' ' + str(1 if m == 1 else (0 if len(results_n) > 1 else results_n.pop()))
+
+k1, m, k2, p2, n2 = map(int, input().split())
+print(decision_1(k1, m, k2, p2, n2))

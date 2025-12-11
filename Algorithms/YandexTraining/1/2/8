@@ -1,0 +1,92 @@
+def maxprodsmall(a):
+    
+    a.sort()
+    
+    prod1 = a[0] * a[1] * a[2]
+    prod2 = a[0] * a[1] * a[-1]
+    prod3 = a[0] * a[-1] * a[-2]
+    prod4 = a[-1] * a[-2] * a[-3]
+    maxprod = max(prod1, prod2, prod3, prod4)
+    
+    if prod1 == maxprod:
+        return a[0], a[1], a[2]
+    elif prod2 == maxprod:
+        return a[0], a[1], a[-1]
+    elif prod3 == maxprod:
+        return a[0], a[-2], a[-1]
+    else: # prod4 == maxprod:
+        return a[-3], a[-2], a[-1]
+    
+def max123(a):
+    
+    if a[2] >= a[1] >= a[0]:
+        max1 = a[0]
+        max2 = a[1]
+        max3 = a[2]
+    elif a[2] >= a[0] >= a[1]:
+        max1 = a[1]
+        max2 = a[0]
+        max3 = a[2]
+    elif a[1] >= a[2] >= a[0]:
+        max1 = a[0]
+        max2 = a[2]
+        max3 = a[1]
+    elif a[1] >= a[0] >= a[2]:
+        max1 = a[2]
+        max2 = a[0]
+        max3 = a[1]
+    elif a[0] >= a[2] >= a[1]:
+        max1 = a[1]
+        max2 = a[2]
+        max3 = a[0]
+    else:
+        max1 = a[2]
+        max2 = a[1]
+        max3 = a[0]
+        
+    return max1, max2, max3
+    
+def maxes(a):
+    
+    max1, max2, max3 = max123(a)
+        
+    for i in range(3, len(a)):
+        if a[i] > max1 and a[i] <= max2: # 1 a 2 3
+            max1 = a[i]
+        if a[i] > max2 and a[i] <= max3: # 1 2 a 3
+            max1 = max2
+            max2 = a[i]
+        elif a[i] > max3: # 1 2 3 a
+            max1 = max2
+            max2 = max3
+            max3 = a[i]
+    
+    return max1, max2, max3
+
+def mins(a):
+    
+    min1, min2, min3 = maxes([-i for i in a])
+    return -min3, -min2, -min1
+
+def main(a): # min1 min2 min3 ... max1 max2 max3
+
+    if len(a) < 6:
+        return maxprodsmall(a)
+    
+    max1, max2, max3 = maxes(a)
+    min1, min2, min3 = mins(a)
+    
+    prod1 = max1 * max2 * max3
+    prod2 = min1 * min2 * max3
+    
+    if prod1 >= prod2:
+        return max1, max2, max3
+    else:
+        return min1, min2, max3
+    
+if __name__ == '__main__':
+    
+    a = list(map(int, input().split()))
+    for x in main(a):
+        print(x, end = ' ')
+        

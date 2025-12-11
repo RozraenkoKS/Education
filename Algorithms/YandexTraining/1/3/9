@@ -1,0 +1,20 @@
+n = int(input())
+pup = [set() for _ in range(n)]
+langs = set()
+for i in range(n):
+    m = int(input())
+    for j in range(m):
+        lang = input()
+        pup[i].add(lang)
+        langs.add(lang)
+ 
+res = langs.copy()  
+for i in range(n):
+    res &= pup[i]
+    
+print(len(res))
+for lang in res:
+    print(lang)
+print(len(langs))
+for lang in langs:
+    print(lang)

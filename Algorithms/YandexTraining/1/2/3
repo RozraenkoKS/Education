@@ -1,0 +1,21 @@
+def main(N, a, x):
+    if N == 0:
+        return 
+    
+    result = a[0]
+    diff = abs(result - x)
+    
+    for i in range(1, len(a)):
+        if abs(a[i] - x) < diff:
+            result = a[i]
+            diff = abs(result - x)
+    
+    return result
+            
+if __name__ == '__main__':
+    N = int(input())
+    a = list(map(int, input().split()))
+    x = int(input())
+    
+    print(main(N, a, x))
+            

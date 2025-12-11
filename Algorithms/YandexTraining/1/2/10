@@ -1,0 +1,40 @@
+def find_interval(n, first_freq, freqs):
+    L, R = 30.0, 4000.0
+    prev = first_freq
+
+    for freq, verdict in freqs:
+        if freq == prev:
+            prev = freq
+            continue
+
+        mid = (prev + freq) / 2.0
+
+        if verdict == 'closer':
+            if freq > prev:
+                L = max(L, mid)
+            else:
+                R = min(R, mid)
+        else:  
+            if freq > prev:
+                R = min(R, mid)
+            else:
+                L = max(L, mid)
+
+        prev = freq
+
+    return L, R
+
+def main():
+    
+    n = int(input())
+    first_freq = float(input())
+    freqs = []
+    for i in range(n - 1):
+        freq, verdict = map(str, input().split())
+        freqs.append((float(freq), verdict))
+
+    L, R = find_interval(n, first_freq, freqs)
+    print(f"{L:.6f} {R:.6f}")
+
+if __name__ == "__main__":
+    main()

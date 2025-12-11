@@ -1,0 +1,29 @@
+def main(n, xs, ys):
+    
+    ks = set()
+    res = 0
+    
+    for i in range(n):
+        
+        k = ys[i] / xs[i]        
+        ks.add(k)
+        
+    x_hit = set() 
+    for k in sorted(ks, reverse=True):
+        for i in range(n):
+            if ys[i] / xs[i] == k and xs[i] not in x_hit:
+                res += 1
+                x_hit.add(xs[i])
+                
+    return res
+
+n = int(input())
+
+xs = []
+ys = []
+for i in range(n):
+    x, y = map(int, input().split())
+    xs.append(x)
+    ys.append(y)
+    
+print(main(n, xs, ys))

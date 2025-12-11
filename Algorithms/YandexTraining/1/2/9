@@ -1,0 +1,31 @@
+def place_bombs(n, m, bombs):
+
+    matrix = [[0] * m for _ in range(n)]
+    dirs = [(-1,-1), (-1,0), (-1,1),
+            ( 0,-1),         ( 0,1),
+            ( 1,-1), ( 1,0), ( 1,1)]
+    
+    for bx, by in bombs:
+        
+        i, j = bx - 1, by - 1  
+        matrix[i][j] = '*'     
+        
+        for dx, dy in dirs:
+            ni, nj = i + dx, j + dy
+            if 0 <= ni < n and 0 <= nj < m and matrix[ni][nj] != '*':
+                matrix[ni][nj] += 1
+    
+    return matrix
+
+def main():
+    
+    n, m, k = map(int, input().split())
+    bombs = [tuple(map(int, input().split())) for _ in range(k)]
+    
+    field = place_bombs(n, m, bombs)
+    
+    for row in field:
+        print(' '.join(str(x) for x in row))
+
+if __name__ == '__main__':
+    main()

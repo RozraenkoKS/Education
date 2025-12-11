@@ -1,0 +1,14 @@
+def main(a, b, c, d, e):
+    
+    if (a <= d and b <= e) or (a <= e and b <= d):
+        return 'YES'
+    elif (c <= d and b <= e) or (c <= e and b <= d):
+        return 'YES'
+    elif (c <= d and a <= e) or (c <= e and a <= d):
+        return 'YES'
+    else:
+        return 'NO'
+
+if __name__ == '__main__':
+    a, b, c, d, e = int(input()), int(input()), int(input()), int(input()), int(input())
+    print(main(a, b, c, d, e))

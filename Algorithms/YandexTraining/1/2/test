@@ -1,0 +1,51 @@
+def interval(n, first_note, notes):
+    min_ = 30.
+    max_ = 4000.
+    f_i_1 = first_note
+    
+    # (f_i - f_i_1)((f_i + f_i_i)/2 - f_tr) < 0
+    
+    
+    
+    for i in range(0, n - 1):
+        
+        f_i, dist = notes[i]
+        
+        if f_i == f_i_1:
+            continue
+        
+        curr = (f_i + f_i_1) / 2
+        
+        if dist == 'closer':
+            if f_i > f_i_1:
+                if curr > min_:
+                    min_ = curr
+            else:
+                if curr < max_:
+                    max_ = curr
+        else:
+            if f_i > f_i_1:
+                if curr < max_:
+                    max_ = curr
+                
+            else:
+                if curr > min_:
+                    min_ = curr
+                
+                    
+        f_i_1 = f_i
+
+    return f'{min_} {max_}'
+
+def main():
+    
+    n = int(input())
+    first_note = float(input())
+    notes = []
+    for i in range(n - 1):
+        note, dist = map(str, input().split())
+        notes.append((float(note), dist))
+        
+    return interval(n, first_note, notes)
+
+print(main())

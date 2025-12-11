@@ -1,0 +1,50 @@
+def counter(x, y, counts):
+    if x < y:
+        counts['ASCENDING'] += 1
+        counts['WEAKLY ASCENDING'] += 1
+    elif x == y:
+        counts['CONSTANT'] += 1
+        counts['WEAKLY ASCENDING'] += 1
+        counts['WEAKLY DESCENDING'] += 1
+    else:
+        counts['DESCENDING'] += 1
+        counts['WEAKLY DESCENDING'] += 1
+        
+def answer(counts, len_):
+    if counts['CONSTANT'] == len_ - 1:
+        return 'CONSTANT'
+    elif counts['ASCENDING'] == len_ - 1:
+        return 'ASCENDING'
+    elif counts['WEAKLY ASCENDING'] == len_ - 1:
+        return 'WEAKLY ASCENDING'
+    elif counts['DESCENDING'] == len_ - 1:
+        return 'DESCENDING'
+    elif counts['WEAKLY DESCENDING'] == len_ - 1:
+        return 'WEAKLY DESCENDING'
+    else:
+        return 'RANDOM'
+
+def main(a):
+    len_ = len(a)
+    counts = {
+        'CONSTANT': 0, 
+        'ASCENDING': 0,
+        'WEAKLY ASCENDING': 0,
+        'DESCENDING': 0,
+        'WEAKLY DESCENDING': 0
+    }
+
+    for i in range(1, len_):
+        counter(a[i - 1], a[i], counts)
+    
+    return answer(counts, len_)
+
+if __name__ == '__main__':
+    a = []
+    x = float(input())
+    
+    while x != -2000000000:
+        a.append(x)
+        x = float(input())
+    
+    print(main(a))

@@ -1,0 +1,22 @@
+def pairs_2(s):
+    
+    res = set()
+    for i in range(len(s) - 1):
+        res.add(s[i : i + 2])
+    return res
+
+def pairs_1(s, pairs):
+    res = 0
+
+    for i in range(len(s) - 1):
+        if s[i : i + 2] in pairs:
+            res += 1
+
+    return res
+
+def main(g1, g2):
+
+    pairs = pairs_2(g2)
+    return pairs_1(g1, pairs)
+
+assert main('WIVYKHBSZLOGOROTIPKLQJWUVXLEZPAGPCDUPUZIDRJTMSHVDUEALKOILER', 'HYAASSTKFMSSTLQENNEIDYDMTTQPJHOYMYFLTCRQTARJHGFILQYENKPRCQHMEUZKQFZTXJFDBIMJJEKWMHFLKZBCUCCKYSGLVZ') == 7

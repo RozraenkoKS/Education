@@ -1,0 +1,19 @@
+def main(n, k, m):
+    
+    if m > k:
+        return 0
+    
+    details = 0
+    left = n
+    m_q = k // m
+    
+    while left >= k:
+        k_q = left // k
+        details += m_q * k_q
+        left = left - k_q * k + (k - m_q * m) * k_q
+    return details
+
+if __name__ == '__main__':
+    n, m, k = map(int, input().split())
+    print(main(n, m, k))
+    

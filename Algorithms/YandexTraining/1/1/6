@@ -1,0 +1,19 @@
+def main(a, b, c, d):
+    s1 = max(b, d) * (a + c)
+    s2 = max(b, c) * (a + d)
+    s3 = max(a, d) * (b + c)
+    s4 = max(a, c) * (b + d)
+    s = min(s1, s2, s3, s4)
+    if s == s2:
+        return f'{a + d} {max(b, c)}'
+    elif s == s1:
+        return f'{a + c} {max(b, d)}'
+    elif s == s3:
+        return f'{b + c} {max(a, d)}'
+    else:
+        return f'{b + d} {max(a, c)}'
+    
+if __name__ == '__main__':
+    a, b, c, d = map(int, input().split())
+    answer = main(a, b, c, d)
+    print(answer)

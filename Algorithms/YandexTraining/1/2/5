@@ -1,0 +1,33 @@
+def main(N, a):
+    
+    if N == 0:
+        return 0
+    
+    flag = False
+    place = 1
+    max_ = -1
+    maxind = -1
+    amax = max(a)
+    
+    for i in range(N - 1):
+        
+        if a[i] % 10 == 5 and flag and a[i + 1] < a[i]:
+            if a[i] > max_:
+                max_ = a[i]
+                maxind = i
+        if a[i] == amax:
+            flag = True
+
+    for j in range(N):
+        if a[j] > a[maxind]:
+            place += 1
+            
+    return place if maxind > 0 else 0
+        
+if __name__ == '__main__':
+    
+    N = int(input())
+    a = list(map(int, input().split()))
+    
+    print(main(N, a))
+    

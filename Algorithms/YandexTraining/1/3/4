@@ -1,0 +1,20 @@
+# from sys import stdin
+
+# words = set()
+
+# for line in stdin:
+#     for word in line.rstrip("\n,;.").split(" \n,;."):
+#         words.add(word)
+# print(words)
+
+# Теперь результат:
+# ['Первая', 'Вторая', 'Третья']
+
+from sys import stdin
+
+words = set()
+for line in stdin:
+    for word in line.split():
+        words.add(word)
+        
+print(len(words))

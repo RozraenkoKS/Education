@@ -1,0 +1,6 @@
+def main(a):
+    return len(set(a))
+
+if __name__ == '__main__':
+    a = list(map(int, input().split()))
+    print(main(a))

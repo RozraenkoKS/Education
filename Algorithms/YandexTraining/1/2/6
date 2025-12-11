@@ -1,0 +1,42 @@
+def is_symmetric(a):
+    N = len(a)
+    
+    if N % 2 == 0:
+        i = 1
+        
+        while i <= N // 2 and a[N // 2 - 1 + i] == a[N // 2 - i]:
+            i += 1
+            
+        if i > N // 2:
+            return True
+        else:
+            return False
+        
+    else:
+        i = 1
+        
+        while i <= N // 2 and a[N // 2 + i] == a[N // 2 - i]:
+            i += 1
+            
+        if i > N // 2:
+            return True
+        else:
+            return False
+        
+def main(N, a):
+    ans = []
+    i = 0
+    
+    while not is_symmetric(a[i:]):
+        ans.append(a[i])
+        i += 1
+        
+    print(len(ans))
+    return ans[::-1]
+    
+if __name__ == '__main__':
+    N = int(input())
+    a = list(map(int, input().split()))
+    
+    for x in main(N, a):
+        print(x, end=' ')
