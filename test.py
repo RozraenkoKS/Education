@@ -17,7 +17,7 @@ def main(x):
             min_dist = dist
 
     if i_x == -1 or i_y == -1:
-        return 0
+        return 1
     else:
         return min_dist
     
